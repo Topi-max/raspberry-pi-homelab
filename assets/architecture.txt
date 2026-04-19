@@ -1,1 +1,15 @@
+Windows laptop (Wi-Fi)
+        |
+        v
+   Home Router / 5G Router
+        |
+        +----------------------+
+        |                      |
+        v                      v
+ Raspberry Pi 5           Other LAN devices
+ (Ethernet)
 
+        |
+        +-- Pi-hole
+        +-- Uptime Kuma
+        +-- dashdot
