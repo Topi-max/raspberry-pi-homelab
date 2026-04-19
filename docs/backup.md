@@ -13,4 +13,7 @@
 ```bash
 mkdir -p ~/backups
 sudo tar -czf ~/backups/homelab-backup-$(date +%F).tar.gz ~/homelab
+```
+## Verification
+```bash
 ls -lh ~/backups
