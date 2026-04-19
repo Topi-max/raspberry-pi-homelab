@@ -123,3 +123,4 @@ Through this project, I practiced:
 
 This repository contains documentation and example configuration files only.  
 Sensitive information such as passwords, private IP planning details, keys, logs, and private service data are intentionally excluded.
+All Docker Compose files in this repository are example configurations only and do not contain live credentials or private service data.
