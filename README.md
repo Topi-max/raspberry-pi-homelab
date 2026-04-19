@@ -44,6 +44,22 @@ The goal of the project was to build a small but practical homelab environment a
 - No port forwarding enabled
 - Internal LAN-only access to services
 
+  Windows laptop (Wi-Fi)
+        |
+        v
+   Home Router / 5G Router
+        |
+        +----------------------+
+        |                      |
+        v                      v
+ Raspberry Pi 5           Other LAN devices
+ (Ethernet)
+
+        |
+        +-- Pi-hole
+        +-- Uptime Kuma
+        +-- dashdot
+
 ## Services
 
 | Service | Purpose |
@@ -89,6 +105,19 @@ Current version:
 - Improve backup automation
 - Evaluate Pi-hole DHCP if router DNS cannot be configured
 - Publish a cleaned public portfolio version
+
+## What I Learned
+
+Through this project, I practiced:
+
+- Raspberry Pi deployment and Linux basics
+- Docker and Docker Compose service management
+- DNS filtering with Pi-hole
+- Basic service monitoring with Uptime Kuma
+- Host monitoring with dashdot
+- SSH hardening with key-based authentication
+- Backup planning and troubleshooting
+- Secure LAN-only service design
 
 ## Disclaimer
 
