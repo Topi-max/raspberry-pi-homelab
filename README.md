@@ -1,6 +1,6 @@
 # Raspberry Pi Homelab
 
-A self-hosted Raspberry Pi 5 homelab project built for learning Linux administration, Docker, DNS filtering, monitoring, and basic service hardening.
+A self-hosted Raspberry Pi 5 homelab project built for learning Linux administration, Docker, DNS filtering, monitoring, and service hardening.
 
 ## Project Overview
 
@@ -8,9 +8,9 @@ This project runs on a Raspberry Pi 5 and includes the following services:
 
 - **Pi-hole** for DNS-based ad and tracker blocking
 - **Uptime Kuma** for service monitoring
-- **dashdot** for system resource monitoring
+- **dashdot** for host resource monitoring
 
-The goal of the project was to build a small but practical homelab environment and document the installation, hardening, maintenance, and troubleshooting process.
+The goal of the project was to build a small but practical homelab environment and document the installation, hardening, maintenance, backup, and troubleshooting process.
 
 ## Hardware
 
@@ -44,10 +44,13 @@ The goal of the project was to build a small but practical homelab environment a
 - No port forwarding enabled
 - Internal LAN-only access to services
 
-  Windows laptop (Wi-Fi)
+### Architecture
+
+```text
+Windows laptop (Wi-Fi)
         |
         v
-   Home Router / 5G Router
+   Home router / 5G router
         |
         +----------------------+
         |                      |
@@ -59,7 +62,7 @@ The goal of the project was to build a small but practical homelab environment a
         +-- Pi-hole
         +-- Uptime Kuma
         +-- dashdot
-
+```
 ## Services
 
 | Service | Purpose |
