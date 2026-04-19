@@ -1,0 +1,9 @@
+*.log
+.env
+*.tar.gz
+authorized_keys
+id_ed25519
+backups/
+docs/screenshots/private/
+pihole/etc-pihole/
+uptime-kuma/data/
