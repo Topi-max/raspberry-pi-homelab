@@ -1,16 +1,16 @@
 # Raspberry Pi Homelab
 
-A self-hosted Raspberry Pi 5 homelab project built for learning Linux administration, Docker, DNS filtering, monitoring, and service hardening.
+A self-hosted Raspberry Pi 5 homelab project built for learning Linux administration, Docker, DNS filtering, recursive DNS resolution, monitoring, and service hardening.
 
 ## Project Overview
 
 This project runs on a Raspberry Pi 5 and includes the following services:
 
-- **Pi-hole** for DNS-based ad and tracker blocking
+- **Pi-hole + Unbound** for DNS filtering and recursive DNS resolution
 - **Uptime Kuma** for service monitoring
 - **dashdot** for host resource monitoring
 
-The goal of the project was to build a small but practical homelab environment and document the installation, hardening, maintenance, backup, and troubleshooting process.
+The goal of the project was to build a small but practical homelab environment and document the installation, hardening, maintenance, backup, troubleshooting, and deployment process.
 
 ## Hardware
 
@@ -24,13 +24,14 @@ The goal of the project was to build a small but practical homelab environment a
 - Raspberry Pi OS Lite (64-bit)
 - Docker Engine
 - Docker Compose
-- Pi-hole
+- Pi-hole + Unbound
 - Uptime Kuma
 - dashdot
 
 ## Features
 
 - DNS filtering with Pi-hole
+- Recursive DNS resolution with Unbound
 - Service uptime monitoring
 - Host system monitoring
 - SSH hardening with key-based authentication
@@ -67,7 +68,7 @@ Windows laptop (Wi-Fi)
 
 | Service | Purpose |
 |--------|---------|
-| Pi-hole | DNS filtering and local DNS service |
+| Pi-hole + Unbound | DNS filtering and recursive local DNS resolution |
 | Uptime Kuma | Uptime monitoring for internal services |
 | dashdot | Resource dashboard for CPU, memory, storage and network |
 
@@ -93,34 +94,36 @@ Detailed setup and maintenance notes are available in the `docs/` folder:
 ## Project Status
 
 Current version:
-- Raspberry Pi base system installed
-- Docker configured
-- Pi-hole working locally
-- Uptime Kuma working
-- dashdot working
-- SSH hardened
-- Backup routine tested
+ - Raspberry Pi base system installed
+ - Docker configured
+ - Pi-hole + Unbound deployed and working
+ - Uptime Kuma working
+ - dashdot working
+ - SSH hardened
+ - Backup routine tested
 
-## Future Improvements
-
-- Add Unbound
-- Add Tailscale for secure remote access
-- Improve backup automation
-- Evaluate Pi-hole DHCP if router DNS cannot be configured
-- Publish a cleaned public portfolio version
 
 ## What I Learned
 
 Through this project, I practiced:
 
-- Raspberry Pi deployment and Linux basics
-- Docker and Docker Compose service management
-- DNS filtering with Pi-hole
-- Basic service monitoring with Uptime Kuma
-- Host monitoring with dashdot
-- SSH hardening with key-based authentication
-- Backup planning and troubleshooting
-- Secure LAN-only service design
+ - Raspberry Pi deployment and Linux basics
+ - Docker and Docker Compose service management
+ - DNS filtering with Pi-hole
+ - Recursive DNS resolution with Unbound
+ - Basic monitoring with Uptime Kuma
+ - Host monitoring with dashdot
+ - SSH hardening with key-based authentication
+ - Backup planning and troubleshooting
+ - Secure LAN-only service design
+ - Debugging containerized DNS architectures
+
+## Future Improvements
+
+- Add Tailscale for secure remote access
+- Improve backup automation
+- Evaluate Pi-hole DHCP if router DNS cannot be configured
+- Publish a cleaned public portfolio version
 
 ## Disclaimer
 
