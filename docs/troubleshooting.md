@@ -46,3 +46,42 @@ Password-only SSH access was not ideal for long-term use.
 
 ### Fix
 Enabled SSH keys first, tested key-based login, and then disabled password authentication.
+
+---
+
+## Host-Based Unbound Did Not Work Well With Docker Pi-hole
+
+### Problem
+Unbound worked correctly on the Raspberry Pi host, but Pi-hole running in Docker did not reliably use it as an upstream DNS resolver.
+
+### Cause
+The DNS path between Dockerized Pi-hole and host-based Unbound was not reliable in this setup.
+
+### Result
+Pi-hole worked normally with public upstream DNS, but integration with host-based Unbound was inconsistent.
+
+### Resolution
+A different architecture was selected for the final solution.
+
+---
+
+## Separate Unbound Container Was Not the Best Fit
+
+### Problem
+A separate Unbound container was tested, but integration and container behavior were harder to maintain than expected.
+
+### Cause
+Different images, architecture compatibility, and networking behavior made the setup more complex.
+
+### Resolution
+The final working solution was a combined Pi-hole + Unbound Docker image.
+
+---
+
+## Final Working DNS Design
+
+### Final Solution
+The final working setup uses a combined Pi-hole + Unbound Docker image.
+
+### Result
+Pi-hole handles DNS filtering and Unbound handles recursive DNS resolution inside the same container.
