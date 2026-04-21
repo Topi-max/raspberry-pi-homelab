@@ -1,5 +1,3 @@
-# Hardening Notes
-
 ## SSH
 
 Initial state:
@@ -24,15 +22,17 @@ Final state:
 
 Services are accessible only from the local network:
 
+- Pi-hole admin
 - Uptime Kuma
 - dashdot
-- Pi-hole admin
 
-## Pi-hole
+## DNS
 
-Important DNS setting:
+Final DNS design:
 
-- Interface listening behavior changed to allow LAN clients
+- Pi-hole + Unbound combined in one Docker container
+- recursive DNS resolution handled locally
+- LAN clients use Pi-hole as DNS server
 
 ## Security Approach
 
