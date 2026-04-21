@@ -1,12 +1,13 @@
 services:
   pihole:
-    image: pihole/pihole:latest
+    image: mpgirro/pihole-unbound:latest
     container_name: pihole
-    hostname: pihole
     restart: unless-stopped
     environment:
       TZ: "Europe/Helsinki"
       FTLCONF_webserver_api_password: "CHANGE_ME"
+      FTLCONF_dns_upstreams: "127.0.0.1#5335"
+      FTLCONF_dns_listeningMode: "all"
     volumes:
       - ./etc-pihole:/etc/pihole
     ports:
