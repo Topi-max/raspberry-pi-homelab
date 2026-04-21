@@ -3,7 +3,7 @@
 
 ## Operating System
 
-Recommended update routine:
+## Recommended update routine:
 
 ```bash
 sudo apt update
@@ -31,7 +31,7 @@ docker compose up -d
 ## Pi-Hole
 
 ```bash
-cd ~/homelab/pihole
+cd ~/homelab/pihole-unbound
 docker compose pull
 docker compose up -d
 ```
